@@ -137,9 +137,9 @@ internal class TemplateListFragment : FragmentBase(),
 
     fun onTemplateCreated(id: String) {
         pagerAdapter.currentTabId = id
-        longSnackbar(root, R.string.template_added_title, R.string.template_set_default_title) {
-            defaultTemplateId = id
-        }
+//        longSnackbar(root, R.string.template_added_title, R.string.template_set_default_title) {
+//            defaultTemplateId = id
+//        }
     }
 
     override fun onBackPressed(): Boolean =

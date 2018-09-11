@@ -86,9 +86,9 @@ internal class TemplateFragment : MetricListFragment(), View.OnClickListener {
                 val oldDefaultId = defaultTemplateId
                 defaultTemplateId = metricsRef.parent!!.id
 
-                longSnackbar(metricsView, R.string.template_set_default_message, R.string.undo) {
-                    defaultTemplateId = oldDefaultId
-                }
+//                longSnackbar(metricsView, R.string.template_set_default_message, R.string.undo) {
+//                    defaultTemplateId = oldDefaultId
+//                }
             }
             R.id.action_delete_template -> {
                 metricsView.clearFocus()
@@ -103,13 +103,13 @@ internal class TemplateFragment : MetricListFragment(), View.OnClickListener {
                         }.logFailures(metrics.map { it.reference }, metrics)
                     }.logFailures()
 
-                    longSnackbar(metricsView, R.string.deleted, R.string.undo) {
-                        async {
-                            firestoreBatch {
-                                for (metric in metrics) set(metric.reference, metric.data)
-                            }.logFailures(metrics.map { it.reference }, metrics)
-                        }.logFailures()
-                    }
+//                    longSnackbar(metricsView, R.string.deleted, R.string.undo) {
+//                        async {
+//                            firestoreBatch {
+//                                for (metric in metrics) set(metric.reference, metric.data)
+//                            }.logFailures(metrics.map { it.reference }, metrics)
+//                        }.logFailures()
+//                    }
                 }.logFailures(metricsRef)
             }
             else -> return false

@@ -56,22 +56,22 @@ class AuthHelper(private val activity: AppCompatActivity) : (View) -> Unit,
 
     private fun signInAnonymously() = async { onSignedIn() }.asTask()
             .addOnFailureListener(activity) {
-                longSnackbar(
-                        rootView,
-                        R.string.anonymous_sign_in_failed_message,
-                        R.string.sign_in_title,
-                        this
-                )
+//                longSnackbar(
+//                        rootView,
+//                        R.string.anonymous_sign_in_failed_message,
+//                        R.string.sign_in_title,
+//                        this
+//                )
             }
 
     fun showSignInResolution() {
-        longSnackbar(rootView, R.string.sign_in_required, R.string.sign_in_title, this)
+//        longSnackbar(rootView, R.string.sign_in_required, R.string.sign_in_title, this)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == RC_SIGN_IN) {
             if (resultCode == Activity.RESULT_OK) {
-                longSnackbar(rootView, R.string.signed_in_message)
+//                longSnackbar(rootView, R.string.signed_in_message)
                 hasShownSignInTutorial = true
 
                 logLoginEvent()
@@ -79,21 +79,21 @@ class AuthHelper(private val activity: AppCompatActivity) : (View) -> Unit,
                 val response = IdpResponse.fromResultIntent(data) ?: return
 
                 if (response.error?.errorCode == ErrorCodes.NO_NETWORK) {
-                    longSnackbar(
-                            rootView,
-                            R.string.no_connection,
-                            R.string.sign_in_try_again_title,
-                            this
-                    )
+//                    longSnackbar(
+//                            rootView,
+//                            R.string.no_connection,
+//                            R.string.sign_in_try_again_title,
+//                            this
+//                    )
                     return
                 }
 
-                longSnackbar(
-                        rootView,
-                        R.string.sign_in_failed_message,
-                        R.string.sign_in_try_again_title,
-                        this
-                )
+//                longSnackbar(
+//                        rootView,
+//                        R.string.sign_in_failed_message,
+//                        R.string.sign_in_try_again_title,
+//                        this
+//                )
             }
         }
     }

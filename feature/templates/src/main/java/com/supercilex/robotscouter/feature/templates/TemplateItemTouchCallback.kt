@@ -239,12 +239,12 @@ internal class TemplateItemTouchCallback<T : OrderedRemoteModel>(
                 delete(deletedRef)
             }.logFailures(deletedRef, itemsBelow)
 
-            longSnackbar(rootView, R.string.deleted, R.string.undo) {
-                firestoreBatch {
-                    set(deletedRef, snapshot.data!!)
-                    updatePositions(itemsBelow, 1)
-                }.logFailures(deletedRef, itemsBelow)
-            }
+//            longSnackbar(rootView, R.string.deleted, R.string.undo) {
+//                firestoreBatch {
+//                    set(deletedRef, snapshot.data!!)
+//                    updatePositions(itemsBelow, 1)
+//                }.logFailures(deletedRef, itemsBelow)
+//            }
         }.logFailures(deletedRef)
     }
 

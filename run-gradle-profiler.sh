@@ -1,0 +1,1 @@
+gradle-profiler --benchmark --project-dir . --scenario-file performance.scenarios kotlin_1_2_41 kotlin_1_3_M2

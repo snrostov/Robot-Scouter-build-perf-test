@@ -68,10 +68,10 @@ internal class ScoutFragment : MetricListFragment() {
 
     override fun onOptionsItemSelected(item: MenuItem) = if (item.itemId == R.id.action_delete) {
         team.trashScout(scoutId)
-        longSnackbar(toolbar, R.string.scout_delete_message, R.string.undo) {
-            team.untrashScout(scoutId)
-            (parentFragment as ScoutListFragmentBase).pagerAdapter!!.currentTabId = scoutId
-        }
+//        longSnackbar(toolbar, R.string.scout_delete_message, R.string.undo) {
+//            team.untrashScout(scoutId)
+//            (parentFragment as ScoutListFragmentBase).pagerAdapter!!.currentTabId = scoutId
+//        }
         true
     } else {
         super.onOptionsItemSelected(item)

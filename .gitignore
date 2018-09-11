@@ -8,3 +8,5 @@ build
 /app/*.json
 /app/keystore.jks
 **/src/main/res/values/config.xml
+/gradle-user-home/**
+/profile-out*/**

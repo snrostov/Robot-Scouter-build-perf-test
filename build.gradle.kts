@@ -8,8 +8,10 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url = uri("https://plugins.gradle.org/m2/") }
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://maven.fabric.io/public") }
+        maven { url = uri("https://dl.bintray.com/kotlin/kotlin-dev/") }
     }
 
     dependencies {
@@ -30,6 +32,7 @@ allprojects {
         google()
         jcenter()
         maven { url = uri("https://jitpack.io") }
+        maven { url = uri("https://dl.bintray.com/kotlin/kotlin-dev/") }
     }
 
     configureGeneral()

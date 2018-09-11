@@ -1,0 +1,10 @@
+kotlin_1_2_41 {
+    tasks = ["assembleDebug"]
+    cleanup-tasks = ["clean"]
+    gradle-args = [
+        "--parallel",
+        "-x", "lint",
+        "-x", "transformClassesWithFirebasePerformancePluginForDebug"
+    ]
+    warm-ups=2   
+}

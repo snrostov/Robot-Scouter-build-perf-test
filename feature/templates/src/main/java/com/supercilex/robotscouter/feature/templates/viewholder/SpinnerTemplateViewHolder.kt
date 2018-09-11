@@ -164,12 +164,12 @@ internal class SpinnerTemplateViewHolder(
             })
             parent.items.adapter.notifyItemRemoved(position)
 
-            longSnackbar(itemView, R.string.deleted, R.string.undo) {
-                parent.metric.update(parent.metric.value.toMutableList().apply {
-                    add(position, items[position])
-                })
-                parent.items.adapter.notifyItemInserted(position)
-            }
+//            longSnackbar(itemView, R.string.deleted, R.string.undo) {
+//                parent.metric.update(parent.metric.value.toMutableList().apply {
+//                    add(position, items[position])
+//                })
+//                parent.items.adapter.notifyItemInserted(position)
+//            }
         }
 
         override fun onFocusChange(v: View, hasFocus: Boolean) {
