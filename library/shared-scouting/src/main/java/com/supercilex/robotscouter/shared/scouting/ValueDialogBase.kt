@@ -29,6 +29,8 @@ internal abstract class ValueDialogBase<out T> : KeyboardDialogBase() {
             setText(arguments!!.getString(CURRENT_VALUE))
             if (savedInstanceState == null) post { selectAll() }
         }
+
+        println("tests")
     }
 
     protected companion object {
