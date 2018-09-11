@@ -1,8 +1,8 @@
 
 
 object Config {
-//    private val kotlinVersion = "1.2.41"
-    private val kotlinVersion = "1.3-M2"
+    private val kotlinVersion = "1.2.41"
+//    private val kotlinVersion = "1.3-M2"
 
     object SdkVersions {
         val compile = 28
